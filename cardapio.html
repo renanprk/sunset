@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunset Espaço - Cardápio</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: black;
+            color: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        .cardapio-container {
+            width: 100%;
+            max-width: 500px;
+            padding: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(255, 165, 0, 0.2);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+            padding-top: 40px;
+            padding-bottom: 20px;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            background: linear-gradient(to bottom, 
+                rgba(255, 69, 0, 0.8) 0%, 
+                rgba(255, 140, 0, 0.7) 30%, 
+                rgba(255, 165, 0, 0.6) 60%, 
+                rgba(0, 0, 0, 1) 100%);
+            z-index: 1;
+        }
+        
+        /* Sol */
+        .header::after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 50%;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 0 40px 20px rgba(255, 165, 0, 0.8);
+            z-index: 1;
+        }
+        
+        .titulo {
+            font-family: 'Brush Script MT', cursive;
+            font-size: 3em;
+            margin-bottom: 5px;
+            position: relative;
+            z-index: 2;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .subtitulo {
+            font-size: 1.2em;
+            letter-spacing: 5px;
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 2;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+        
+        .itens {
+            margin-bottom: 30px;
+        }
+        
+        .item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            align-items: center;
+        }
+        
+        .item-nome {
+            flex-grow: 1;
+        }
+        
+        .item-preco {
+            font-weight: bold;
+            min-width: 80px;
+            text-align: right;
+        }
+        
+        .categoria {
+            margin-top: 25px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            padding-bottom: 5px;
+            font-weight: bold;
+            color: rgba(255, 165, 0, 0.9);
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="cardapio-container">
+        <div class="header">
+            <h1 class="titulo">Sunset Espaço</h1>
+            <div class="subtitulo">CARDÁPIO</div>
+        </div>
+        
+        <div class="itens">
+            <div class="categoria">Comidas</div>
+            <div class="item">
+                <div class="item-nome">• Churrasquinho misto com molho e farofa</div>
+                <div class="item-preco">R$ 15,00</div>
+            </div>
+            <div class="item">
+                <div class="item-nome">• Churrasquinho misto s/ molho e farofa</div>
+                <div class="item-preco">R$ 10,00</div>
+            </div>
+            <div class="item">
+                <div class="item-nome">• Caldo verde</div>
+                <div class="item-preco">R$ 12,00</div>
+            </div>
+            <div class="item">
+                <div class="item-nome">• Sopa de ervilha</div>
+                <div class="item-preco">R$ 10,00</div>
+            </div>
+            
+            <div class="categoria">Bebidas</div>
+            <div class="item">
+                <div class="item-nome">• Heineken latão</div>
+                <div class="item-preco">R$ 10,00</div>
+            </div>
+            <div class="item">
+                <div class="item-nome">• Brahma latão</div>
+                <div class="item-preco">R$ 8,00</div>
+            </div>
+            <div class="item">
+                <div class="item-nome">• Império latão</div>
+                <div class="item-preco">R$ 8,00</div>
+            </div>
+            <div class="item">
+                <div class="item-nome">• Caipirinha limão</div>
+                <div class="item-preco">R$ 18,00</div>
+            </div>
+            <div class="item">
+                <div class="item-nome">• Caipivodka limão</div>
+                <div class="item-preco">R$ 23,00</div>
+            </div>
+            <div class="item">
+                <div class="item-nome">• Garrafa água</div>
+                <div class="item-preco">R$ 3,00</div>
+            </div>
+            <div class="item">
+                <div class="item-nome">• Coca cola lata</div>
+                <div class="item-preco">R$ 5,00</div>
+            </div>
+            <div class="item">
+                <div class="item-nome">• Coca cola zero</div>
+                <div class="item-preco">R$ 5,00</div>
+            </div>
+            <div class="item">
+                <div class="item-nome">• Guaraná lata</div>
+                <div class="item-preco">R$ 5,00</div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            Aceitamos cartão de débito, crédito, dinheiro ou PIX
+        </div>
+    </div>
+</body>
+</html>
+
